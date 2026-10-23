@@ -1,0 +1,197 @@
+/* Reset de Estilos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    "SF Pro Display",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #1e1e38 0%, #0f0f1a 100%);
+  color: #e2e8f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+/* Janela do Terminal (Card Principal) */
+.terminal-container {
+  background-color: #131324;
+  border: 1px solid #2e2e4f;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 520px;
+  overflow: hidden;
+}
+
+/* Barra Superior do Terminal */
+.terminal-header {
+  background-color: #1a1a30;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #2e2e4f;
+  position: relative;
+}
+
+.window-buttons {
+  display: flex;
+  gap: 8px;
+  position: absolute;
+}
+
+.window-buttons .btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.btn.close {
+  background-color: #ff5f56;
+}
+.btn.minimize {
+  background-color: #ffbd2e;
+}
+.btn.maximize {
+  background-color: #27c93f;
+}
+
+.terminal-title {
+  width: 100%;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  letter-spacing: 0.5px;
+}
+
+/* Corpo do Terminal */
+.terminal-body {
+  padding: 32px;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: rgba(39, 201, 63, 0.1);
+  color: #27c93f;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  border: 1px solid rgba(39, 201, 63, 0.2);
+}
+
+h1 {
+  font-size: 1.75rem;
+  color: #ffffff;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.instructions {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+/* Lista de Passos */
+.steps-list {
+  list-style: none;
+  margin-bottom: 28px;
+}
+
+.steps-list li {
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+/* Números customizados para a lista */
+.steps-list li::before {
+  content: counter(item) "";
+  counter-increment: item;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.steps-list {
+  counter-reset: item;
+}
+
+strong {
+  color: #3b82f6;
+}
+
+/* Tags de Teclado (Kbd) */
+kbd {
+  background-color: #2e2e4f;
+  border: 1px solid #474775;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 0.8rem;
+  font-family: monospace;
+  color: #f8fafc;
+  box-shadow: 0 2px 0 #1a1a30;
+}
+
+/* Caixa de Dica de Atalho */
+.shortcut-tip {
+  background-color: #1a1a30;
+  border-left: 4px solid #3b82f6;
+  padding: 14px 16px;
+  border-radius: 0 8px 8px 0;
+  display: flex;
+  gap: 12px;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  line-height: 1.4;
+}
+
+.shortcut-tip .icon {
+  font-size: 1.1rem;
+}
+
+/* Animação do Ponto de Status */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
