@@ -1,8 +1,5 @@
-let entrada = prompt("Digite sua média: ").replace(",", ".");
-let media = parseFloat(entrada);
-
+let media = parseFloat (prompt ("Digite a sua média: "));
 function verificarAprovacao(media) {
-
   if (media >= 7) {
     return "Aprovado";
   } else if (media >= 5) {
@@ -12,4 +9,4 @@ function verificarAprovacao(media) {
   }
 }
 
-console.log(verificarAprovacao(media));
+alert(verificarAprovacao(media))
